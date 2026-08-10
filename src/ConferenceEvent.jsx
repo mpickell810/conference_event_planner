@@ -52,6 +52,8 @@ const ConferenceEvent = () => {
         }
     };
 
+    const mealsItems = useSelector((state) => state.meals);
+
     const getItemsFromTotalCost = () => {
         const items = [];
         venueItems.forEach((item) => {
@@ -144,7 +146,7 @@ const ConferenceEvent = () => {
           }
         }
       }
-    const mealsItems = useSelector((state) => state.meals);
+   
     const mealsTotalCost = calculateTotalCost("meals");
     const avTotalCost = calculateTotalCost("av");
     const totalCosts = {
